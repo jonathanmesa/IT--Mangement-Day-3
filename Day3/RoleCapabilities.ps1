@@ -1,4 +1,4 @@
-﻿
+
 
 ###NOTE: This can only be done on a Domain joined machine cmdlet are aligned to be run from the lab environment win 10 client
 
@@ -22,7 +22,7 @@ New-PSSessionConfigurationFile -Path “c:\Pshell\MyJEARoleEndpoint.pssc”
 &“c:\Pshell\MyJEARoleEndpoint.pssc”
 
 #Add /change the following role capability
-SessionType = 'RestrictedRemoteServer’	#	->> Needed to get basic command instead of a empty shell
+SessionType = 'RestrictedRemoteServer'	#	->> Needed to get basic command instead of a empty shell
 RoleDefinitions = @{ 'CONTOSO\role1' = @{ RoleCapabilities = ‘role1’}}
 
 #Register a new PS JEA session using the just created file 
